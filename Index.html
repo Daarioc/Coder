@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormulaNews - Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header y Nav */
+        header {
+            background-color: #600020;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 42px;
+            font-weight: bold;
+            font-family: 'Racing Sans One', cursive;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Estilos img y news */
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .news-image {
+            flex: 1;
+            max-width: 33%;
+            position: relative;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .news-text {
+            margin-top: 40px;
+        }
+
+        .news-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-title {
+            color: #610020;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .news-content {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .image-section {
+                flex-direction: column;
+            }
+
+            .news-image {
+                max-width: 100%;
+            }
+        }
+         /* Estilo footer */
+         footer {
+        background-color: #333;
+        color: white;
+        padding: 30px 0;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-bottom: 20px;
+    }
+
+    .social-icons a {
+        color: white;
+        font-size: 24px;
+        margin: 0 15px;
+        text-decoration: none;
+    }
+
+    footer p {
+        font-size: 14px;
+        font-family: 'Orbitron', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FormulaNews</div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="equipos.html">Equipos</a>
+        <a href="pilotos.html">Pilotos</a>
+        <a href="calendario.html">Calendario</a>
+        <a href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <div class="content">
+        <!-- Img -->
+        <div class="image-section">
+    <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1728116693268-125c5d6ad9e2?q=80&w=2129&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Verstappen Red Bull">
+    </div>
+    <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1668609812413-f385e4bf74f5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Leclerc Ferrari">
+    </div>
+    <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1691076145470-d4dd93ea2e04?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hamilton Mercedes">
+    </div>
+</div>
+
+        <!-- News -->
+        <div class="news-text">
+            <div class="news-item">
+                <h2 class="news-title">Verstappen domina el GP de Bahrein 2024</h2>
+                <p class="news-date">2 Marzo 2024</p>
+                <p class="news-content">Max Verstappen comenzó la temporada 2024 de la misma manera que terminó 2023: dominando por completo. El piloto neerlandés lideró de principio a fin el Gran Premio de Bahrein, primera carrera del año, seguido por su compañero Sergio Pérez, completando un 1-2 para Red Bull Racing. Carlos Sainz completó el podio para Ferrari.</p>
+            </div>
+
+            <div class="news-item">
+                <h2 class="news-title">Hamilton se prepara para su última temporada con Mercedes</h2>
+                <p class="news-date">1 Marzo 2024</p>
+                <p class="news-content">Lewis Hamilton afronta su última temporada con Mercedes antes de su histórico cambio a Ferrari para 2025. El siete veces campeón del mundo está determinado a terminar su etapa con la escudería alemana de la mejor manera posible, buscando volver a la victoria después de dos temporadas sin conseguirlo.</p>
+            </div>
+
+            <div class="news-item">
+                <h2 class="news-title">Alonso optimista con el nuevo Aston Martin</h2>
+                <p class="news-date">29 Febrero 2024</p>
+                <p class="news-content">Fernando Alonso muestra su optimismo con el nuevo AMR24 tras las primeras sesiones en Bahrein. El piloto español considera que el equipo ha dado un paso adelante en términos de desarrollo y espera poder luchar regularmente por podios durante la temporada 2024.</p>
+            </div>
+
+            <div class="news-item">
+                <h2 class="news-title">Ferrari presenta mejoras para el SF-24</h2>
+                <p class="news-date">28 Febrero 2024</p>
+                <p class="news-content">El equipo italiano ha introducido varias actualizaciones aerodinámicas en su monoplaza para la primera carrera de la temporada. Charles Leclerc y Carlos Sainz se muestran confiados en el potencial del nuevo coche y esperan poder desafiar a Red Bull durante el campeonato.</p>
+            </div>
+
+            <div class="news-item">
+                <h2 class="news-title">McLaren sorprende en los entrenamientos</h2>
+                <p class="news-date">27 Febrero 2024</p>
+                <p class="news-content">El equipo McLaren ha mostrado un ritmo prometedor durante los entrenamientos de pretemporada. Lando Norris y Oscar Piastri han logrado tiempos competitivos que los sitúan como posibles candidatos a podios regulares durante la temporada 2024.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/Formula1" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/F1" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/f1" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@Formula1" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2024 FormulaNews. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
