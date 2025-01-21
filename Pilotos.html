@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormulaNews - Pilotos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header y Nav*/
+        header {
+            background-color: #600020;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 42px;
+            font-weight: bold;
+            font-family: 'Racing Sans One', cursive;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Estilos pilotos */
+        .drivers-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .drivers-title {
+            color: #600020;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .drivers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .driver-card {
+            background: #f5f5f5;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .driver-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .driver-info {
+            padding: 20px;
+        }
+
+        .driver-name {
+            color: #600020;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .driver-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #600020;
+            margin-bottom: 10px;
+        }
+
+        .driver-details {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .driver-team {
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 32px;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 8px 15px;
+                margin: 0 5px;
+            }
+        }
+        /* footer */
+        footer {
+        background-color: #333;
+        color: white;
+        padding: 30px 0;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-bottom: 20px;
+    }
+
+    .social-icons a {
+        color: white;
+        font-size: 24px;
+        margin: 0 15px;
+        text-decoration: none;
+    }
+
+    footer p {
+        font-size: 14px;
+        font-family: 'Orbitron', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">FormulaNews</div>
+    </header>
+
+    <!-- Nav -->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="equipos.html">Equipos</a>
+        <a href="pilotos.html">Pilotos</a>
+        <a href="calendario.html">Calendario</a>
+        <a href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <!-- Principal -->
+    <div class="drivers-content">
+        <h1 class="drivers-title">Pilotos de Fórmula 1</h1>
+        
+        <div class="drivers-grid">
+            <!-- Max -->
+            <div class="driver-card">
+                <img src="https://media.formula1.com/content/dam/fom-website/drivers/2024Drivers/verstappen.jpg.img.1920.medium.jpg/1708592060071.jpg" alt="Max Verstappen" class="driver-image">
+                <div class="driver-info">
+                    <div class="driver-number">1</div>
+                    <h2 class="driver-name">Max Verstappen</h2>
+                    <p class="driver-details">País: Países Bajos</p>
+                    <p class="driver-details">Fecha de nacimiento: 30/09/1997</p>
+                    <p class="driver-details">Campeonatos: 3</p>
+                    <p class="driver-team">Red Bull Racing</p>
+                </div>
+            </div>
+
+            <!-- Lewis -->
+            <div class="driver-card">
+                <img src="https://media.formula1.com/content/dam/fom-website/drivers/2024Drivers/hamilton.jpg.img.1920.medium.jpg/1708592142299.jpg" alt="Lewis Hamilton" class="driver-image">
+                <div class="driver-info">
+                    <div class="driver-number">44</div>
+                    <h2 class="driver-name">Lewis Hamilton</h2>
+                    <p class="driver-details">País: Reino Unido</p>
+                    <p class="driver-details">Fecha de nacimiento: 07/01/1985</p>
+                    <p class="driver-details">Campeonatos: 7</p>
+                    <p class="driver-team">Mercedes-AMG Petronas</p>
+                </div>
+            </div>
+
+            <!-- Charles -->
+            <div class="driver-card">
+                <img src="https://media.formula1.com/content/dam/fom-website/drivers/2024Drivers/leclerc.jpg.img.1920.medium.jpg/1708592200796.jpg" alt="Charles Leclerc" class="driver-image">
+                <div class="driver-info">
+                    <div class="driver-number">16</div>
+                    <h2 class="driver-name">Charles Leclerc</h2>
+                    <p class="driver-details">País: Mónaco</p>
+                    <p class="driver-details">Fecha de nacimiento: 16/10/1997</p>
+                    <p class="driver-details">Campeonatos: 0</p>
+                    <p class="driver-team">Scuderia Ferrari</p>
+                </div>
+            </div>
+
+            <!-- Fernando -->
+            <div class="driver-card">
+                <img src="https://media.formula1.com/content/dam/fom-website/drivers/2024Drivers/alonso.jpg.img.1920.medium.jpg/1708592599534.jpg" alt="Fernando Alonso" class="driver-image">
+                <div class="driver-info">
+                    <div class="driver-number">14</div>
+                    <h2 class="driver-name">Fernando Alonso</h2>
+                    <p class="driver-details">País: España</p>
+                    <p class="driver-details">Fecha de nacimiento: 29/07/1981</p>
+                    <p class="driver-details">Campeonatos: 2</p>
+                    <p class="driver-team">Aston Martin F1</p>
+                </div>
+            </div>
+
+            <!-- Lando -->
+            <div class="driver-card">
+                <img src="https://media.formula1.com/content/dam/fom-website/drivers/2024Drivers/norris.jpg.img.1920.medium.jpg/1708592892113.jpg" alt="Lando Norris" class="driver-image">
+                <div class="driver-info">
+                    <div class="driver-number">4</div>
+                    <h2 class="driver-name">Lando Norris</h2>
+                    <p class="driver-details">País: Reino Unido</p>
+                    <p class="driver-details">Fecha de nacimiento: 13/11/1999</p>
+                    <p class="driver-details">Campeonatos: 0</p>
+                    <p class="driver-team">McLaren Racing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Footer -->
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/Formula1" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/F1" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/f1" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@Formula1" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2024 FormulaNews. Todos los derechos reservados.</p>
+</footer>
+</body>
+</body>
+</html>
