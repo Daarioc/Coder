@@ -1,0 +1,211 @@
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #e74c3c;
+$text-color: #333;
+$light-bg: #f9f9f9;
+$spacing-unit: 20px;
+$border-radius: 8px;
+$transition-time: 0.3s;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform $transition-time ease, box-shadow $transition-time ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Reset y estilos base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+// Estilos del slider
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+    .slide {
+      min-width: 100%;
+      height: 500px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+      }
+    }
+  }
+
+  .slider-buttons {
+    position: absolute;
+    bottom: $spacing-unit;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    button {
+      padding: 12px 24px;
+      margin: 0 8px;
+      cursor: pointer;
+      background: rgba(255,255,255,0.9);
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all $transition-time ease;
+
+      &:hover {
+        background: $secondary-color;
+        color: white;
+      }
+    }
+  }
+}
+
+// Estilos de las categorías
+.categorias {
+  padding: $spacing-unit * 2;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .categoria {
+    margin-bottom: $spacing-unit * 2;
+    padding: $spacing-unit * 1.5;
+    border-radius: $border-radius;
+    background-color: $light-bg;
+
+    h2 {
+      color: $primary-color;
+      margin-bottom: $spacing-unit;
+      font-size: 2rem;
+      position: relative;
+      padding-bottom: 10px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: $secondary-color;
+      }
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: $spacing-unit;
+
+      .producto {
+        @include card-shadow;
+        background: white;
+        border-radius: $border-radius;
+        overflow: hidden;
+        padding: 0;
+
+        img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          transition: transform $transition-time ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+
+        .producto-info {
+          padding: $spacing-unit;
+
+          h3 {
+            color: $primary-color;
+            margin-bottom: $spacing-unit/2;
+            font-size: 1.2rem;
+          }
+
+          p {
+            color: lighten($text-color, 20%);
+            font-size: 0.9rem;
+          }
+
+          .precio {
+            color: $secondary-color;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: $spacing-unit/2;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  .slider-container {
+    height: 300px;
+    
+    .slide {
+      height: 300px;
+    }
+  }
+
+  .categorias {
+    padding: $spacing-unit;
+
+    .categoria {
+      padding: $spacing-unit;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+nav {
+  a {
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+
+    &:hover {
+      transform: scale(1.2);
+      color: #ff0000;
+    }
+  }
+} 
